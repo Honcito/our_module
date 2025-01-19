@@ -15,3 +15,9 @@ git push origin feature/nombre_de_tu_rama
 Para revisar que los cambios se han actualizado
 git status
 
+
+Fusionar(Merge) tus cambios a main
+git checkout main
+git pull origin main
+git merge feature/nombre_de_tu_rama
+
