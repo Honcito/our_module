@@ -8,3 +8,10 @@ origin/HEAD -> origin/main
   origin/main
 
 git checkout feature/nombre_de_tu_rama
+
+Para subir tus cambios:
+git push origin feature/nombre_de_tu_rama
+
+Para revisar que los cambios se han actualizado
+git status
+
