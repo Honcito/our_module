@@ -1,0 +1,7 @@
+
+
+docker exec -it odoo_16 bash
+
+odoo -u escuela -d postgres_15 --stop-after-init
+
+docker exec -it odoo_16 bash
