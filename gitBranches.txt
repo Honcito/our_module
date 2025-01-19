@@ -1,0 +1,10 @@
+Pasos a seguir para utilizar la rama de cada uno
+git fetch
+git branch -r
+origin/HEAD -> origin/main
+  origin/feature/alex_component1
+  origin/feature/javier_component2
+  origin/feature/victor_component3
+  origin/main
+
+git checkout feature/nombre_de_tu_rama
