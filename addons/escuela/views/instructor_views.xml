@@ -1,7 +1,7 @@
 <odoo>
     <record id="view_instructor_form" model="ir.ui.view">
-        <field name="field_name">custom.instructor.form</field>
-        <field name="model">custom.instructor</field>
+        <field name="field_name">escuela.instructor.form</field>
+        <field name="model">escuela.instructor</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -17,8 +17,8 @@
     </record>
 
     <record id="view_instructor_tree" model="ir.ui.view">
-        <field name="name">custom.instructor.tree</field>
-        <field name="model">custom.instructor</field>
+        <field name="name">escuela.instructor.tree</field>
+        <field name="model">escuela.instructor</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -27,7 +27,7 @@
         </field>
     </record>
 
-    <menuitem id="menu_custom_instructors" name="Instructors" parent="base.menu_custom_root"/>
-    <menuitem id="submenu_instructors" name="Manage Instructors" parent="menu_custom_instructors" action="action_instructor_list"/>
+    <menuitem id="menu_escuela_instructors" name="Instructors" parent="base.menu_escuela_root"/>
+    <menuitem id="submenu_instructors" name="Manage Instructors" parent="menu_escuela_instructors" action="action_instructor_list"/>
     
 </odoo>

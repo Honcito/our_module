@@ -1,7 +1,7 @@
 <odoo>
     <record id="view_course_form" model="ir.ui.view">
-		<field name="name">custom.course.form</field>
-		<field name="model">custom.course</field>
+		<field name="name">escuela.course.form</field>
+		<field name="model">escuela.course</field>
 		<field name="arch" type="xml"></field>
 			<form>
 				<sheet>
@@ -17,8 +17,8 @@
 	</record>
 
 	<record id="view_course_tree" model="ir.ui.view">
-		<field name="name">custom.course.tree</field>
-		<field name="model">custom.course</field>
+		<field name="name">escuela.course.tree</field>
+		<field name="model">escuela.course</field>
 		<field name="arch" type="xml">
 			<tree>
 				<field name="name"/>
@@ -28,6 +28,6 @@
 		</field>
 	</record>
 
-	<menuitem id="menu_custom_courses" name="Courses" sequence="1" parent="base.menu_custom_root"/>
-	 <menuitem id="submenu_courses" name="Manage Courses" parent="menu_custom_courses" action="action_course_list"/>
+	<menuitem id="menu_escuela_courses" name="Courses" sequence="1" parent="base.menu_escuela_root"/>
+	 <menuitem id="submenu_courses" name="Manage Courses" parent="menu_escuela_courses" action="action_course_list"/>
 </odoo>
