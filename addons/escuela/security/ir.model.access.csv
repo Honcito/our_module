@@ -1,5 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_escuela_profesor,escuela.profesor,model_escuela_profesor,base.group_user,1,1,1,1
 access_escuela_course,escuela.course,model_escuela_course,base.group_user,1,1,1,1
 access_escuela_instructor,escuela.instructor,model_escuela_instructor,base.group_user,1,1,1,1
 access_escuela_student,escuela.student,model_escuela_student,base.group_user,1,1,1,1
