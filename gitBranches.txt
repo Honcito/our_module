@@ -1,0 +1,23 @@
+Pasos a seguir para utilizar la rama de cada uno
+git fetch
+git branch -r
+origin/HEAD -> origin/main
+  origin/feature/alex_component1
+  origin/feature/javier_component2
+  origin/feature/victor_component3
+  origin/main
+
+git checkout feature/nombre_de_tu_rama
+
+Para subir tus cambios:
+git push origin feature/nombre_de_tu_rama
+
+Para revisar que los cambios se han actualizado
+git status
+
+
+Fusionar(Merge) tus cambios a main
+git checkout main
+git pull origin main
+git merge feature/nombre_de_tu_rama
+
