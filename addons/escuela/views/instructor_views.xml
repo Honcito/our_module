@@ -1,33 +1,49 @@
 <odoo>
-    <record id="view_instructor_form" model="ir.ui.view">
-        <field name="field_name">escuela.instructor.form</field>
-        <field name="model">escuela.instructor</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group>
-                        <field name="name"></field>
-                        <field name="surname"></field>
-                        <field name="department"></field>
-                        <field name="course_ids" widget="one2many_list/">
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+    <data>
+        
+        <!-- Vista de formulario para el instructor -->
+        <record id="view_instructor_form" model="ir.ui.view">
+            <field name="name">escuela.instructor.form</field>
+            <field name="model">escuela.instructor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="surname"/>
+                            <field name="department"/>
+                            <field name="course_ids" widget="one2many"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <record id="view_instructor_tree" model="ir.ui.view">
-        <field name="name">escuela.instructor.tree</field>
-        <field name="model">escuela.instructor</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="department"/>
-            </tree>
-        </field>
-    </record>
+        <!-- Vista de árbol para los instructores -->
+        <record id="view_instructor_tree" model="ir.ui.view">
+            <field name="name">escuela.instructor.tree</field>
+            <field name="model">escuela.instructor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="department"/>
+                </tree>
+            </field>
+        </record>
 
-    <menuitem id="menu_escuela_instructors" name="Instructors" parent="base.menu_escuela_root"/>
-    <menuitem id="submenu_instructors" name="Manage Instructors" parent="menu_escuela_instructors" action="action_instructor_list"/>
-    
+        <!-- Definición de la acción para la lista de instructores -->
+        <record id="action_instructor_list" model="ir.actions.act_window">
+            <field name="name">Instructors</field>
+            <field name="res_model">escuela.instructor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Menú principal de la escuela -->
+        <menuitem id="menu_escuela_instructors" name="Instructors" parent="base.menu_management"/>
+        
+        <!-- Submenú para gestionar instructores -->
+        <menuitem id="submenu_instructors" name="Manage Instructors" parent="base.menu_management" action="action_instructor_list"/>
+
+    </data>
 </odoo>

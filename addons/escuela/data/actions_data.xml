@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <!-- Acción para cursos -->
+        <record id="action_course_list" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">escuela.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Acción para estudiantes -->
+        <record id="action_student_list" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">escuela.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Acción para instructores -->
+        <record id="action_instructor_list" model="ir.actions.act_window">
+            <field name="name">Instructors</field>
+            <field name="res_model">escuela.instructor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

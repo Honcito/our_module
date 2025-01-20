@@ -6,7 +6,7 @@ class Course(models.Model):
     _description = 'Course'
 
     name = fields.Char(string='Nombre', required=True)
-    surname = fields.Text(string='Descripcion')
+    description = fields.Char(string='Descripción', required=True)
     schedule = fields.Datetime(string='Horario')
     instructor_id = fields.Many2one('escuela.instructor', string='Instructor')
     student_ids = fields.Many2many('escuela.student', string='Estudiantes')
