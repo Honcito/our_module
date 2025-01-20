@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_instructor_form" model="ir.ui.view">
+        <field name="field_name">custom.instructor.form</field>
+        <field name="model">custom.instructor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="surname"></field>
+                        <field name="department"></field>
+                        <field name="course_ids" widget="one2many_list/">
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_instructor_tree" model="ir.ui.view">
+        <field name="name">custom.instructor.tree</field>
+        <field name="model">custom.instructor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="department"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_custom_instructors" name="Instructors" parent="base.menu_custom_root"/>
+    <menuitem id="submenu_instructors" name="Manage Instructors" parent="menu_custom_instructors" action="action_instructor_list"/>
+    
+</odoo>
