@@ -1,6 +1,5 @@
 <odoo>
     <data>
-
         <!-- Vista de formulario para el curso -->
         <record id="view_course_form" model="ir.ui.view">
             <field name="name">escuela.course.form</field>
@@ -34,7 +33,7 @@
             </field>
         </record>
 
-        <!-- Definición de la acción que abre la lista de cursos -->
+        <!-- Acción para mostrar la lista de cursos -->
         <record id="action_course_list" model="ir.actions.act_window">
             <field name="name">Courses</field>
             <field name="res_model">escuela.course</field>
@@ -43,10 +42,9 @@
         </record>
 
         <!-- Menú principal de la escuela -->
-        <menuitem id="menu_escuela_courses" name="Courses" sequence="1" parent="base.menu_management"/>
+        <menuitem id="menu_escuela_courses" name="Courses" sequence="1" parent="escuela.menu_root"/>
 
         <!-- Submenú para gestionar cursos -->
-        <menuitem id="submenu_courses" name="Manage Courses" parent="base.menu_management" action="action_course_list"/>
-
+        <menuitem id="submenu_courses" name="Manage Courses" parent="escuela.menu_courses" action="escuela.action_course_list"/>
     </data>
 </odoo>

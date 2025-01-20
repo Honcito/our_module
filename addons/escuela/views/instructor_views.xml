@@ -40,10 +40,10 @@
         </record>
 
         <!-- Menú principal de la escuela -->
-        <menuitem id="menu_escuela_instructors" name="Instructors" parent="base.menu_management"/>
-        
+        <menuitem id="menu_escuela_instructors" name="Instructors" parent="escuela.menu_root"/>
+
         <!-- Submenú para gestionar instructores -->
-        <menuitem id="submenu_instructors" name="Manage Instructors" parent="base.menu_management" action="action_instructor_list"/>
+        <menuitem id="submenu_instructors" name="Manage Instructors" parent="escuela.menu_instructors" action="escuela.action_instructor_list"/>
 
     </data>
 </odoo>

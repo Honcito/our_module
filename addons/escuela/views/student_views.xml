@@ -43,10 +43,10 @@
         </record>
 
         <!-- Menú principal de la escuela -->
-        <menuitem id="menu_escuela_students" name="Students" sequence="1" parent="base.menu_management"/>
+        <menuitem id="menu_escuela_students" name="Students" sequence="1" parent="escuela.menu_root"/>
 
         <!-- Submenú para gestionar estudiantes -->
-        <menuitem id="submenu_students" name="Manage Students" parent="base.menu_management" action="action_student_list"/>
+        <menuitem id="submenu_students" name="Manage Students" parent="escuela.menu_students" action="escuela.action_student_list"/>
 
     </data>
 </odoo>

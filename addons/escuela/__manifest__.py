@@ -27,9 +27,10 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
         'data/actions_data.xml',
-        'data/menu_data.xml',
+        'security/ir.model.access.csv',
+        'data/menu_escuela.xml',
+        'views/views.xml',
         'views/course_views.xml',
         'views/student_views.xml',
         'views/instructor_views.xml',

@@ -1,0 +1,22 @@
+<odoo>
+    <!-- Definición de la acción para Cursos -->
+    <record id="action_course_list" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="res_model">escuela.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definición de la acción para Estudiantes -->
+    <record id="action_student_list" model="ir.actions.act_window">
+        <field name="name">Estudiantes</field>
+        <field name="res_model">escuela.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definición de la acción para Instructores -->
+    <record id="action_instructor_list" model="ir.actions.act_window">
+        <field name="name">Instructores</field>
+        <field name="res_model">escuela.instructor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
