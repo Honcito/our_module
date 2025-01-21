@@ -1,16 +1,12 @@
 Cambiar a tu rama de trabajo: Asegúrate de estar en la rama en la que estás trabajando:
-
-bash
-Copiar
-Editar
 git checkout tu-rama
+
 Traer los cambios del repositorio remoto: Antes de empezar a trabajar, trae los cambios realizados por los demás en el repositorio remoto:
-
-
 git fetch origin
-Actualizar tu rama con los últimos cambios de la rama principal (main o develop): Fusiona los cambios de la rama principal en tu rama de trabajo para que esté actualizada:
 
+Actualizar tu rama con los últimos cambios de la rama principal (main o develop): Fusiona los cambios de la rama principal en tu rama de trabajo para que esté actualizada:
 git merge main
+
 Esto integra los últimos cambios de main en tu rama. Si hay conflictos, resuélvelos en este paso.
 
 Realiza tus cambios y crea commits: Trabaja en tu rama, realiza los cambios necesarios, y guárdalos en un commit:
