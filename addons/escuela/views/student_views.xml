@@ -13,6 +13,7 @@
                             <field name="surname"/>
                             <field name="email"/>
                             <field name="phone"/>
+                            <field name="foto" widget="image" options="{'size': (65, 80)}" />
                             <field name="course_ids" widget="many2many_tags"/>
                         </group>
                     </sheet>
@@ -26,6 +27,7 @@
             <field name="model">escuela.student</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="foto" widget="image" options="{'size': (65, 80)}" />
                     <field name="name"/>
                     <field name="surname"/>
                     <field name="email"/>
