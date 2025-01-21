@@ -1,0 +1,62 @@
+Resumen del Proyecto
+El módulo que estás desarrollando en Odoo 16 es un Sistema de Gestión de Cursos para gestionar la información de Cursos, Instructores y Estudiantes. Este sistema permite organizar los cursos que se ofrecen, asignar instructores a cada curso y gestionar los estudiantes que se inscriben en los cursos.
+
+Árbol de Proyecto
+El árbol del proyecto podría verse algo así:
+
+lua
+Copiar
+Editar
+/our_module
+|-- __manifest__.py           # Manifesto del módulo
+|-- models
+|   |-- __init__.py
+|   |-- course.py             # Definición del modelo de curso
+|   |-- instructor.py         # Definición del modelo de instructor
+|   |-- student.py            # Definición del modelo de estudiante
+|
+|-- views
+|   |-- course_views.xml      # Vistas de los cursos
+|   |-- instructor_views.xml  # Vistas de los instructores
+|   |-- student_views.xml     # Vistas de los estudiantes
+|   |.. views.xml             # Vista principal
+|
+|
+|-- data
+|   |-- menu_escuela.xml      # Menús de navegación
+|-- |-- actions_data.xml      # Asociar vistas a modelos y habilitar acceso
+|
+|-- security
+|   |-- ir.model.access.csv   # Control de acceso
+|
+|-- __init__.py
+
+
+
+Modelo Relacional
+Curso (Course)
+
+Campo: name (Nombre del curso), description (Descripción), start_date (Fecha de inicio), end_date (Fecha de fin), instructor_ids (Relación con instructores).
+Instructor
+
+Campo: name (Nombre del instructor), email (Correo electrónico), phone (Teléfono), photo (Foto personal), course_ids (Relación con los cursos que imparte).
+Estudiante (Student)
+
+Campo: name (Nombre del estudiante), email (Correo electrónico), phone (Teléfono), photo (Foto personal), course_ids (Relación con los cursos en los que está inscrito).
+Relaciones
+Curso-Instructor (Relación Muchos a Uno)
+
+Un Curso puede tener un solo Instructor asignado, pero un Instructor puede enseñar muchos Cursos.
+Relación: Many2one en el modelo Course con el modelo Instructor.
+Campo en Course: instructor_id (relaciona con el modelo Instructor).
+Curso-Estudiante (Relación Muchos a Muchos)
+
+Un Curso puede tener muchos Estudiantes inscritos, y un Estudiante puede estar inscrito en muchos Cursos.
+Relación: Many2many entre Course y Student.
+Campo en Course: student_ids (relaciona con el modelo Student).
+Esquema Relacional
+Entidad	Relación	Campo clave	Relación con
+Course	Muchos a Uno	instructor_id	Instructor
+Course	Muchos a Muchos	student_ids	Student
+Instructor	Uno a Muchos	id	Course
+Student	Muchos a Muchos	id	Course
