@@ -6,20 +6,20 @@
     <menuitem name="Cursos" id="escuela.menu_courses" parent="escuela.menu_root" sequence="1"/>
 
     <!-- Submenú de Gestión de Cursos -->
-    <menuitem name="Gestionar Cursos" id="escuela.menu_courses_manage" parent="escuela.menu_courses" 
-              action="escuela.action_course_list" sequence="1"/>
+    <!-- <menuitem name="Gestionar Cursos" id="escuela.menu_courses_manage" parent="escuela.menu_courses" 
+              action="escuela.action_course_list" sequence="1"/> -->
 
     <!-- Menú de Estudiantes -->
     <menuitem name="Estudiantes" id="escuela.menu_students" parent="escuela.menu_root" sequence="2"/>
 
     <!-- Submenú de Gestión de Estudiantes -->
-    <menuitem name="Gestionar Estudiantes" id="escuela.menu_students_manage" parent="escuela.menu_students" 
-              action="escuela.action_student_list" sequence="1"/>
+    <!-- <menuitem name="Gestionar Estudiantes" id="escuela.menu_students_manage" parent="escuela.menu_students" 
+              action="escuela.action_student_list" sequence="1"/> -->
 
     <!-- Menú de Instructores -->
     <menuitem name="Instructores" id="escuela.menu_instructors" parent="escuela.menu_root" sequence="3"/>
 
     <!-- Submenú de Gestión de Instructores -->
-    <menuitem name="Gestionar Instructores" id="escuela.menu_instructors_manage" parent="escuela.menu_instructors" 
-              action="escuela.action_instructor_list" sequence="1"/>
+    <!-- <menuitem name="Gestionar Instructores" id="escuela.menu_instructors_manage" parent="escuela.menu_instructors" 
+              action="escuela.action_instructor_list" sequence="1"/> -->
 </odoo>

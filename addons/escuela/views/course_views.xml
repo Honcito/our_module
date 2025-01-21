@@ -45,6 +45,6 @@
         <menuitem id="menu_escuela_courses" name="Courses" sequence="1" parent="escuela.menu_root"/>
 
         <!-- Submenú para gestionar cursos -->
-        <menuitem id="submenu_courses" name="Manage Courses" parent="escuela.menu_courses" action="escuela.action_course_list"/>
+        <menuitem id="submenu_courses" name="Gestionar Cursos" parent="escuela.menu_courses" action="escuela.action_course_list"/>
     </data>
 </odoo>
