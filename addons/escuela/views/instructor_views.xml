@@ -12,7 +12,7 @@
                             <field name="name"/>
                             <field name="surname"/>
                             <field name="department"/>
-                            <field name="foto" widget="image"/>
+                            <field name="foto" widget="image" options="{'size': (65, 80)}" />
                             <field name="course_ids" widget="one2many"/>
                         </group>
                     </sheet>
@@ -26,10 +26,11 @@
             <field name="model">escuela.instructor</field>
             <field name="arch" type="xml">
                 <tree>
-                    <!-- <field name="foto" widget="image" options="{'width': 15px, 'height': 15px}"/> -->
-                    <field name="foto" widget="image" options="{'width': 25, 'height': 25}"/>
+                    <field name="foto" widget="image" options="{'size': (65, 80)}" />
                     <field name="name"/>
+                    <field name="surname"/>
                     <field name="department"/>
+                    <field name="course_names" string="Cursos"/>
                 </tree>
             </field>
         </record>

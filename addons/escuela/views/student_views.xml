@@ -13,6 +13,7 @@
                             <field name="surname"/>
                             <field name="email"/>
                             <field name="phone"/>
+                            <field name="foto" widget="image" style="width: 65px; height: 80px;"/>
                             <field name="course_ids" widget="many2many_tags"/>
                         </group>
                     </sheet>
@@ -26,10 +27,12 @@
             <field name="model">escuela.student</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="foto" widget="image" style="width: 65px; height: 80px;"/>
                     <field name="name"/>
                     <field name="surname"/>
                     <field name="email"/>
                     <field name="phone"/>
+                    <field name="course_names" string="Cursos"/>
                 </tree>
             </field>
         </record>

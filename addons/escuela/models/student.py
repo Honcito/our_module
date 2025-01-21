@@ -9,3 +9,10 @@ class Student(models.Model):
     phone = fields.Char(string='Telefono')
     email = fields.Char(string='Email')
     course_ids = fields.Many2many('escuela.course', string='Cursos')
+     course_names = fields.Char(string='Nombres de los Cursos', compute='_compute_course_names', store=True)
+     
+ #Método para recuperar el nombre del curso y poder añadirlo a la lista de estudiantes
+    @api.depends('course_ids')
+    def _compute_course_names(self):
+        for student in self:
+            student.course_names = ', '.join(student.course_ids.mapped('name'))
