@@ -12,7 +12,7 @@
                             <field name="name"/>
                             <field name="surname"/>
                             <field name="department"/>
-                            <field name="foto" widget="image" options="{'width': 25, 'height': 25}"/>
+                            <field name="foto" widget="image"/>
                             <field name="course_ids" widget="one2many"/>
                         </group>
                     </sheet>
