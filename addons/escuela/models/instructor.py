@@ -6,7 +6,7 @@ class Instructor(models.Model):
 
     name = fields.Char(string='Nombre', required=True)
     surname = fields.Char(string='Apellidos', required=True)
-    department = fields.Char(string='Departmento')
+    department = fields.Char(string='Departamento')
     foto = fields.Binary(string='Foto')
     course_ids = fields.One2many('escuela.course', 'instructor_id', string='Cursos')
     course_names = fields.Char(string='Nombres de Cursos', compute='_compute_course_names')
