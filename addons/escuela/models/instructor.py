@@ -7,4 +7,5 @@ class Instructor(models.Model):
     name = fields.Char(string='Nombre', required=True)
     surname = fields.Char(string='Apellidos', required=True)
     department = fields.Char(string='Department')
+    foto = fields.Binary(string='Foto')
     course_ids = fields.One2many('escuela.course', 'instructor_id', string='Cursos')
